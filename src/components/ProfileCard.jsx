@@ -3,9 +3,10 @@
 export default function ProfileCard() {
     const user={
         img: "/src/images/digital-art.png",
-        nom: "Rafiqur Rahman",
-        poste: "Team manager",
+        nom: "Franklin Akalo",
+        poste: "Web dev Junior",
         location: "Leeds, United Kingdom"
+
     }
     return (
         <div className="flex rounded-2xl shadow-sm border-1 border-gray-200 p-2 m-5">
@@ -15,6 +16,7 @@ export default function ProfileCard() {
                 <p className='text-gray-500'>{user.poste}</p>
                 <p className='text-gray-400'>{user.location}</p>
             </div>
+            <div>Edit</div>
         </div>
     )
 }

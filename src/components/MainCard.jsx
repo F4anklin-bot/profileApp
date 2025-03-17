@@ -10,8 +10,12 @@ export default function MainCard() {
                 return <Profile />
             case "Security":
                 return <Security />
+            default:
+                return <Profile />
         }
     }
+
+    
     return (
         <div className="flex bg-white h-auto my-5 w-[95%] rounded-xl shadow-md">
             <Sidebar setSelected={setSelected} />

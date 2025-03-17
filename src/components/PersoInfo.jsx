@@ -1,10 +1,20 @@
+import { useState } from 'react';
+
 export default function PersoInfo(){
+    const [editing, setEditing] = useState(false);
+    const [formData, setFormData] = useState()
     const info = {
-        firstname : 'Rafiqur',
-        lastname : 'Rahman',
-        email : 'rafiqurrahman51@gmail.com',
-        phone : '+09 345 346 46',
-        bio : 'Team Manager'
+        firstname : 'Franklin',
+        lastname : 'Akalo',
+        email : 'akalofranklin1@gmail.com',
+        phone : '+228 90192593',
+        bio : 'Junior Web Dev'
+    }
+    const handleEdit = () => {
+        setEditing(true);
+    }
+    const handleSave = () => {
+        setEditing(false);
     }
     return (
         <div className="flex border-1 shadow-sm rounded-2xl p-4 mt-2 mx-5 border-gray-200">
@@ -17,7 +27,13 @@ export default function PersoInfo(){
                     <p className="flex flex-col">Bio: <span className="text-gray-500">{info.bio}</span></p>
                 </div>
             </div>
-            
+            <div>
+                {editing ? (
+                    <button className='border-gray-300 text-gray-500 p-6 rounded-3xl border-1' onClick={handleSave}>Save</button>
+                ) : (
+                    <button className='border-gray-300 text-gray-500 p-6 border-1 rounded-3xl' onClick={handleEdit}>Edit</button>
+                )}
+            </div>
         </div>
     )
 }
