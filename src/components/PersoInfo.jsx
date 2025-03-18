@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 export default function PersoInfo(){
     const [editing, setEditing] = useState(false);
-    const [formData, setFormData] = useState()
     const info = {
         firstname : 'Franklin',
         lastname : 'Akalo',
@@ -29,9 +28,9 @@ export default function PersoInfo(){
             </div>
             <div>
                 {editing ? (
-                    <button className='border-gray-300 text-gray-500 p-6 rounded-3xl border-1' onClick={handleSave}>Save</button>
+                    <button className='cursor-pointer border-gray-300 text-gray-500 py-2 px-6 rounded-3xl border-1' onClick={handleSave}>Save</button>
                 ) : (
-                    <button className='border-gray-300 text-gray-500 p-6 border-1 rounded-3xl' onClick={handleEdit}>Edit</button>
+                    <button className='cursor-pointer border-gray-300 text-gray-500 py-2 px-6 border-1 rounded-3xl' onClick={handleEdit}>Edit</button>
                 )}
             </div>
         </div>
