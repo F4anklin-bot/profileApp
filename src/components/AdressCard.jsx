@@ -32,7 +32,7 @@ export default function Address() {
                         className="border-1 border-gray-200 rounded-2xl p-2"
                         />
                     ) : (
-                        <p className="flex flex-col">Country : <span className="text-gray-500">{adress.country}</span></p>
+                        <p className="flex flex-col">Country : <span className="text-gray-500">{formData.country}</span></p>
                     )}
                     
                     {/* code pour modifier le city/state */}
@@ -48,7 +48,7 @@ export default function Address() {
                             className="border-1 border-gray-200 rounded-2xl p-2"
                             />
                         ) : (
-                            <p className="flex flex-col">City/State : <span className="text-gray-500">{adress.city}</span></p>
+                            <p className="flex flex-col">City/State : <span className="text-gray-500">{formData.city}</span></p>
                         )
                     }
 
